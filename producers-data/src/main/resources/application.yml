@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: producers-data
+  kafka:
+    bootstrap-servers: my-kafka:9093
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+server:
+  port: 7070
+  address: 0.0.0.0
+  servlet:
+    context-path: /
